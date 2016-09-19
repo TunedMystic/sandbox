@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>some page</title>
+    </head>
+
+    <body>
+        <h1>Company List view</h1>
+        <p><strong>{{ companies.count }}</strong> Companies</p>
+        <ul>
+            {% for company in companies %}
+            <li>
+                <h3>Name: {{ company.name }}</h3>
+                <p>Description: {{ company.description }}</p>
+                <p>Website: {{ company.website }}</p>
+                <br>
+            </li>
+            {% endfor %}
+        </ul>
+        <p>
+            <a href="{% url 'home' %}">Home</a>
+        </p>
+    </body>
+</html>
