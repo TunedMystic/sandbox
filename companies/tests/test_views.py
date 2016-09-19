@@ -20,6 +20,7 @@ class CompanyViewTestCases(TestCase):
         ])
 
     def test_company_list(self):
+
         url = reverse('company-list')
         response = self.client.get(url)
 
