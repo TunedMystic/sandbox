@@ -1,0 +1,19 @@
+language: python
+services:
+- postgresql
+python:
+- 2.7
+before_install:
+- export DJANGO_SETTINGS_MODULE=sandbox.settings
+install:
+- pip install -r requirements.txt
+before_script:
+- sudo bash scripts/bootstrap-db.sh
+script:
+- python manage.py test
+notifications:
+  email:
+    recipients:
+      - jsanweb@gmail.com
+    on_success: never
+    on_failure: always
