@@ -29,4 +29,4 @@ class CompanyViewTestCases(TestCase):
 
         # Check the contents of the template context.
         companies_count = response.context['companies'].count()
-        self.assertEqual(companies_count, 5)
+        self.assertEqual(companies_count, 4)
