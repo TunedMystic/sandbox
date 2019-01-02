@@ -17,6 +17,11 @@ class CompanyViewTestCases(TestCase):
                 description='Microblogging for ppl',
                 website='tweetr.com'
             ),
+            Company(
+                name='Central Network, INC',
+                description='The central network company',
+                website='cnsolutions.com'
+            ),
         ])
 
     def test_company_list(self):
@@ -29,4 +34,4 @@ class CompanyViewTestCases(TestCase):
 
         # Check the contents of the template context.
         companies_count = response.context['companies'].count()
-        self.assertEqual(companies_count, 5)
+        self.assertEqual(companies_count, 6)
